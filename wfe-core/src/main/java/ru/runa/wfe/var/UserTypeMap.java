@@ -238,7 +238,7 @@ public class UserTypeMap extends HashMap<String, Object> {
     public boolean isEmpty() {
         for (VariableDefinition attributeDefinition : userType.getAttributes()) {
             Object object = get(attributeDefinition.getName());
-            if (!Utils.isNullOrEmpty(object) && !Objects.equal(object, attributeDefinition.getDefaultValue())) {
+            if (!Utils.isNullOrEmpty(object)) {
                 return false;
             }
         }
